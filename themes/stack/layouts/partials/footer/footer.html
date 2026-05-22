@@ -1,0 +1,19 @@
+{{- $ThemeVersion := "3.30.0" -}}
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+    </section>
+    
+    <section class="powerby">
+        {{ with .Site.Params.footer.customText }}
+            {{ . | safeHTML }} <br/>
+        {{ end }}
+
+        Developed by <a href="https://deepmindstrategy.com" target="_blank" rel="noopener">DeepMindStrategy.com</a><br>
+        <span>✉ <a href="mailto:inquiries@top10.lk">inquiries@top10.lk</a></span>
+    </section>
+</footer>

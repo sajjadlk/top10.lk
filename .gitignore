@@ -1,0 +1,20 @@
+# Hugo generated output
+/public/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Hugo cache
+/hugo_cache/
+/tmp/
+
+# Environment
+.env
+*.log

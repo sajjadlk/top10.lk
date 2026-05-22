@@ -1,0 +1,4 @@
+top10.lk, www.top10.lk {
+	root * /opt/data/top10.lk/public
+	file_server
+}

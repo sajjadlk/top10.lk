@@ -1,0 +1,520 @@
+/* =====================================================================
+   top10.lk — Black & Copper Luxury Theme
+   Dark metallic gradient with warm copper/gold accents
+   ===================================================================== */
+
+:root {
+    /* --- Background (deep charcoal gradient base) --- */
+    --body-background: #0e0e14;
+
+    /* --- Accent Colors (Copper + Bronze Metallic) --- */
+    --accent-color: #B87333;
+    --accent-color-darker: #9A5E28;
+    --accent-color-text: #ffffff;
+
+    /* --- Text (warm silver) --- */
+    --body-text-color: #c4c4d0;
+
+    /* --- Cards (dark with copper undertones) --- */
+    --card-background: #16161f;
+    --card-background-selected: #1d1d2e;
+    --card-text-color-main: #e4e4ee;
+    --card-text-color-secondary: #9e9eaf;
+    --card-text-color-tertiary: #6e6e80;
+    --card-separator-color: rgba(184, 115, 51, 0.12);
+
+    /* --- Article --- */
+    --link-background-color: 184, 115, 51;
+    --link-background-opacity: 0.12;
+    --link-background-opacity-hover: 0.22;
+    --heading-border-size: 4px;
+
+    /* --- Code --- */
+    --code-background-color: rgba(184, 115, 51, 0.08);
+    --code-text-color: #C87A3E;
+
+    /* --- Table --- */
+    --table-border-color: #2a2a3a;
+    --tr-even-background-color: #1a1a28;
+
+    /* --- Blockquote --- */
+    --blockquote-border-size: 4px;
+    --blockquote-background-color: #181824;
+
+    /* --- Sidebar & Widgets --- */
+    --tag-border-radius: 6px;
+
+    /* --- Scrollbar --- */
+    --scrollbar-thumb: hsl(28, 50%, 35%);
+
+    /* --- Shadows (copper-tinted deep shadows) --- */
+    --shadow-l1: 0px 4px 12px rgba(0, 0, 0, 0.45), 0px 0px 2px rgba(184, 115, 51, 0.08);
+    --shadow-l2: 0px 10px 24px rgba(0, 0, 0, 0.50), 0px 2px 6px rgba(184, 115, 51, 0.06);
+    --shadow-l3: 0px 10px 24px rgba(0, 0, 0, 0.55), 0px 2px 6px rgba(184, 115, 51, 0.10);
+    --shadow-l4: 0px 24px 40px rgba(0, 0, 0, 0.55), 0px 16px 24px rgba(184, 115, 51, 0.08);
+
+    /* --- Dark Mode (default is already dark — keep as subtle option) --- */
+    &[data-scheme="dark"] {
+        --body-background: #08080d;
+
+        --accent-color: #D4956A;
+        --accent-color-darker: #C87A3E;
+        --accent-color-text: #000000;
+
+        --body-text-color: rgba(255, 255, 255, 0.78);
+
+        --card-background: #111118;
+        --card-background-selected: rgba(212, 149, 106, 0.10);
+        --card-text-color-main: rgba(255, 255, 255, 0.92);
+        --card-text-color-secondary: rgba(255, 255, 255, 0.62);
+        --card-text-color-tertiary: rgba(255, 255, 255, 0.40);
+        --card-separator-color: rgba(255, 255, 255, 0.08);
+
+        --link-background-color: 212, 149, 106;
+
+        --code-background-color: rgba(212, 149, 106, 0.10);
+        --code-text-color: #D4956A;
+
+        --table-border-color: #222230;
+        --tr-even-background-color: #14141e;
+
+        --blockquote-background-color: #101018;
+
+        --scrollbar-thumb: hsl(28, 50%, 30%);
+
+        --shadow-l1: 0px 4px 12px rgba(0, 0, 0, 0.5), 0px 0px 2px rgba(0, 0, 0, 0.4);
+        --shadow-l2: 0px 10px 24px rgba(0, 0, 0, 0.55), 0px 2px 6px rgba(0, 0, 0, 0.4);
+        --shadow-l3: 0px 10px 24px rgba(0, 0, 0, 0.6), 0px 2px 6px rgba(0, 0, 0, 0.45);
+        --shadow-l4: 0px 24px 40px rgba(0, 0, 0, 0.6), 0px 16px 24px rgba(0, 0, 0, 0.45);
+    }
+}
+
+/* --- Body: sharp leather grain on deep black --- */
+body {
+    background:
+        /* Base gradient - deep blacks with warm undertone */
+        linear-gradient(
+            165deg,
+            #040303 0%,
+            #080605 30%,
+            #0d0a08 50%,
+            #080605 70%,
+            #040303 100%
+        );
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Leather grain - large seamless texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'%3E%3Cfilter id='big-grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='4' seed='5' stitchTiles='stitch' /%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.06 0 0 0 0 0.03 0 0 0 0 0.01 0 0 0 1 0' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23big-grain)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: screen;
+    opacity: 0.35;
+}
+
+/* Leather creases/indents - large seamless texture */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='big-crease'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.003' numOctaves='3' seed='11' stitchTiles='stitch' /%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 -2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23big-crease)' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    opacity: 0.2;
+}
+
+/* --- Tag Badges (copper gradient) --- */
+:root {
+    --tag-background: #B87333;
+    --tag-color: #ffffff;
+    --tag-background-hover: #C87A3E;
+
+    &[data-scheme="dark"] {
+        --tag-background: #D4956A;
+        --tag-color: #000000;
+        --tag-background-hover: #C87A3E;
+    }
+}
+
+/* --- Section Headings with copper gradient accent bar --- */
+.section-card h2,
+.widget-title {
+    border-left: 4px solid transparent;
+    border-image: linear-gradient(to bottom, #B87333, #D4956A) 1;
+    padding-left: 12px;
+}
+
+/* --- Article List Title (homepage) --- */
+.article-list--compact .article-title {
+    color: #D4956A;
+}
+
+/* --- Navigation hover (copper) --- */
+.nav-item a:hover {
+    color: #D4956A !important;
+}
+
+/* --- Article cards: copper gradient top border --- */
+article.card {
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #B87333, #D4956A, #C9A96E) 1;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle copper shimmer overlay on hover */
+article.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(184, 115, 51, 0.04), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+article.card:hover::before {
+    left: 150%;
+}
+
+article.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(184, 115, 51, 0.12), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Sidebar avatar: copper gradient ring --- */
+.site-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-avatar .site-logo {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border: none;
+    border-radius: 50%;
+    transform: scale(1.15);
+}
+
+/* Copper gradient ring around avatar */
+.site-avatar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 5px;
+    background: linear-gradient(135deg, #8B5A2B, #B87333 30%, #D4956A 60%, #C9A96E);
+}
+
+/* --- Author line on articles (copper) --- */
+.article-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 1.4rem;
+    color: #D4956A;
+}
+.article-author .author-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 10%;
+    border: 2px solid #D4956A;
+}
+.article-author strong {
+    font-size: 1.5em;
+    color: #D4956A;
+}
+
+/* --- Header / Site Title (if applicable) --- */
+.section-card .section-term {
+    color: #D4956A;
+}
+
+/* --- Top navigation bar area --- */
+.navbar {
+    border-bottom: 1px solid rgba(184, 115, 51, 0.12);
+}
+
+/* --- Copper separator line after nav categories --- */
+.nav-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #B87333 20%, #D4956A 50%, #C9A96E 80%, transparent);
+    margin: 12px 0;
+    max-width: 80%;
+    opacity: 0.7;
+}
+
+/* --- About/Contact links below separator --- */
+ol.menu.nav-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+ol.menu.nav-bottom li a {
+    font-size: 1rem;
+    color: var(--body-text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+ol.menu.nav-bottom li a:hover {
+    color: #D4956A;
+}
+
+/* --- Footer copper accent --- */
+.footer {
+    border-top: 1px solid rgba(184, 115, 51, 0.08);
+}
+
+/* --- Blockquote left border copper --- */
+blockquote {
+    border-left-color: #B87333 !important;
+}
+
+/* --- Buttons (copper gradient on hover) --- */
+button:hover,
+.btn:hover,
+.pagination a:hover {
+    background: linear-gradient(135deg, #B87333, #C87A3E) !important;
+    color: #ffffff !important;
+}
+
+/* --- Markdown heading underlines --- */
+.article-content h2,
+.article-content h3 {
+    border-bottom: 2px solid rgba(184, 115, 51, 0.15);
+    padding-bottom: 6px;
+}
+
+/* --- Selection color (copper tint) --- */
+::selection {
+    background: rgba(184, 115, 51, 0.3);
+    color: #ffffff;
+}
+
+/* --- Subscribe/CTA buttons if present --- */
+.cta-button {
+    background: linear-gradient(135deg, #B87333, #C87A3E);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Link color refinement --- */
+a {
+    color: #C87A3E;
+}
+a:hover {
+    color: #D4956A;
+}
+
+/* --- Back to Top floating button --- */
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9997;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B87333, #C87A3E);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(184, 115, 51, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+    pointer-events: none;
+}
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.back-to-top:hover {
+    background: linear-gradient(135deg, #C87A3E, #D4956A);
+    box-shadow: 0 6px 20px rgba(184, 115, 51, 0.3), 0 0 0 1px rgba(212, 149, 106, 0.4);
+    transform: translateY(-2px);
+}
+.back-to-top:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* --- Separator lines (copper gradient, centred) --- */
+.article-content hr {
+    height: 2px;
+    border: none;
+    background: linear-gradient(90deg, transparent, #B87333 20%, #D4956A 50%, #C9A96E 80%, transparent);
+    margin: 40px auto;
+    max-width: 60%;
+    opacity: 0.7;
+}
+
+/* --- Search bar: copper border + icon --- */
+.search-form.widget {
+    border: 1px solid rgba(184, 115, 51, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: var(--card-background);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.search-form.widget:focus-within {
+    border-color: #B87333;
+    box-shadow: 0 0 0 1px rgba(184, 115, 51, 0.15);
+}
+.search-form.widget input {
+    background: transparent;
+    color: var(--card-text-color-main);
+    border: none;
+    outline: none;
+}
+.search-form.widget button svg {
+    color: #B87333;
+    stroke: #B87333;
+}
+.search-form.widget button:hover svg {
+    color: #D4956A;
+    stroke: #D4956A;
+}
+
+/* --- WebKit scrollbar (copper) --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: hsl(28, 50%, 35%);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(28, 50%, 45%);
+}
+
+/* --- Category badges: match search bar style --- */
+.article-category a {
+    background: transparent !important;
+    border: 1px solid rgba(184, 115, 51, 0.3);
+    border-radius: 8px;
+    padding: 4px 14px;
+    color: #B87333 !important;
+    font-size: 1.8rem !important;
+    transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.article-category a:hover {
+    border-color: #B87333;
+    color: #D4956A !important;
+    box-shadow: 0 0 0 1px rgba(184, 115, 51, 0.15);
+    background: transparent !important;
+}
+
+/* =====================================================================
+   Mobile: Sticky Categories Bar
+   ===================================================================== */
+@media (max-width: 767px) {
+    .left-sidebar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--card-background);
+        border-bottom: 1px solid rgba(184, 115, 51, 0.2);
+        padding: 4px 0;
+        max-height: none;
+
+        /* Hide sidebar header (logo, site name) on mobile */
+        header {
+            display: none;
+        }
+
+        /* Categories: always visible, horizontal, sticky */
+        #main-menu {
+            display: flex !important;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 4px 8px;
+            margin: 0;
+            background: transparent;
+            box-shadow: none;
+            overflow: visible;
+
+            li {
+                width: auto;
+
+                a {
+                    font-size: 0.85rem;
+                    padding: 6px 14px;
+                    border: 1px solid rgba(184, 115, 51, 0.3);
+                    border-radius: 6px;
+                    color: #D4956A;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    transition: all 0.2s ease;
+                }
+
+                a:hover {
+                    border-color: #D4956A;
+                    background: rgba(184, 115, 51, 0.1);
+                }
+
+                &.current a {
+                    background: rgba(184, 115, 51, 0.15);
+                    border-color: #D4956A;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        /* Hide hamburger, separator, About/Contact, bottom section */
+        #toggle-menu,
+        .nav-separator,
+        .nav-bottom,
+        .menu-bottom-section {
+            display: none;
+        }
+    }
+}

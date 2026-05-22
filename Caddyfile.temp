@@ -1,0 +1,5 @@
+:8080 {
+    root * /opt/data/top10.lk/public
+    file_server
+    encode gzip
+}
