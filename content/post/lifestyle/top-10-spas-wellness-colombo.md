@@ -169,4 +169,4 @@ Cinnamon Lakeside Colombo offers a dedicated Ayurveda spa focusing on traditiona
 - **Package deals:** Spa Ceylon and Kemara regularly run promotions — check their websites
 - **Best hours:** Kemara and Spa Ceylon are standalone, so check individual timings — hotel spas generally stay open later
 
-*Ratings and prices are based on publicly available data as of May 2025. Contact individual spas for the most current pricing and availability.*
+*Ratings and prices are based on publicly available data as of May 2026. Contact individual spas for the most current pricing and availability.*

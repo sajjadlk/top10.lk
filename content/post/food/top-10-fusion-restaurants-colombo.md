@@ -217,4 +217,4 @@ A spectacular **7-cuisine buffet experience** at Hilton Colombo that embodies th
 - **Budget tip:** Lunch menus at Nihonbashi and The Gallery Café offer better value than dinner
 - **Group dining:** King of the Mambo and Graze Kitchen are ideal for groups with varied tastes
 
-*Ratings and review counts are based on publicly available data as of May 2025. Check individual restaurant sites or Google Maps for the most current information before visiting.*
+*Ratings and review counts are based on publicly available data as of May 2026. Check individual restaurant sites or Google Maps for the most current information before visiting.*

@@ -1,8 +1,7 @@
-top10.lk {
+top10.lk, www.top10.lk {
+	bind 0.0.0.0
 	tls {
-		issuer acme {
-			challenges http
-		}
+		issuer acme
 	}
 	root * /opt/data/top10.lk/public
 	file_server
