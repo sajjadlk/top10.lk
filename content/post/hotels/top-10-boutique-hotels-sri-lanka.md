@@ -255,7 +255,7 @@ The bungalow has been meticulously restored: high ceilings, period furnishings, 
 
 Water Garden Sigiriya is architect Channa Daswatte's tribute to the 2,000-year-old water gardens of Sigiriya Rock — and it's spectacular. Thirty over-water villas are set within a network of ponds and waterways inspired by the ancient hydraulic systems of the Sigiriya kingdom, with Sigiriya Rock itself looming on the horizon.
 
-Named one of National Geographic's Best Hotels and featured in Condé Nast Traveler, Water Garden Sigiriya offers a completely different kind of Cultural Triangle experience — one rooted in design, water, and landscape rather than temple-hopping from a generic hotel base. The Twin Level Restaurant serves gourmet Sri Lankan-European fusion, the over-water spa is a destination in itself, and private candlelit dinners with views of the illuminated Sigiriya Rock are unforgettable.
+Named one of National Geographic's Best Hotels and featured in Condé Nast Traveler, Water Garden Sigiriya offers a completely different kind of Cultural Triangle experience — one rooted in design, water, and landscape rather than dashing between heritage sites from a standard hotel room. The Twin Level Restaurant serves gourmet Sri Lankan-European fusion, the over-water spa is a destination in itself, and private candlelit dinners with views of the illuminated Sigiriya Rock are unforgettable.
 
 **Why it's on the list:** Channa Daswatte design. National Geographic Best Hotels. Over-water villas with Sigiriya Rock views — the most architecturally significant stay in the Cultural Triangle.
 
